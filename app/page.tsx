@@ -6,6 +6,7 @@ import { StatsPanel } from "@/components/ui/StatsPanel";
 import { ControlPanel } from "@/components/ui/ControlPanel";
 import { Legend } from "@/components/ui/Legend";
 import { TitlePanel } from "@/components/ui/TitlePanel";
+import { Footer } from "@/components/ui/Footer";
 
 // Use Next.js dynamic import with ssr: false - this prevents R3F from loading during SSR
 const GlobeScene = dynamic(
@@ -36,6 +37,7 @@ export default function Home() {
       <StatsPanel />
       <ControlPanel />
       <Legend />
+      <Footer />
     </main>
   );
 }
