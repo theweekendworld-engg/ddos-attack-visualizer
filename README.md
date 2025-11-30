@@ -60,3 +60,37 @@ bun run dev
 - `lib/` - Utilities for API, geo, and attack processing
 - `types/` - TypeScript type definitions
 
+## SEO & Performance
+
+This project is optimized for search engines and performance:
+
+- ✅ Comprehensive meta tags (Open Graph, Twitter Cards)
+- ✅ Structured data (JSON-LD Schema.org)
+- ✅ Sitemap and robots.txt
+- ✅ PWA support with manifest.json
+- ✅ Optimized images and assets
+- ✅ Security headers
+- ✅ Mobile-responsive design
+- ✅ Accessibility features (ARIA labels, semantic HTML)
+
+### SEO Features
+
+- **Meta Tags**: Full Open Graph and Twitter Card support
+- **Structured Data**: Schema.org WebApplication markup
+- **Sitemap**: Auto-generated at `/sitemap.xml`
+- **Robots**: Configured at `/robots.txt`
+- **Performance**: Optimized loading, compression, and caching
+
+### Environment Variables
+
+Create a `.env` file with:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+CLOUDFLARE_API_KEY=your_api_key_here  # Optional
+```
+
+## License
+
+Made with ❤️ by [theweekendworld](https://theweekendworld.com)
+

@@ -23,22 +23,38 @@ const GlobeScene = dynamic(
 
 export default function Home() {
   return (
-    <main className="relative w-screen h-screen overflow-hidden bg-black">
-      <Suspense fallback={
-        <div className="absolute inset-0 flex items-center justify-center bg-black">
-          <div className="text-white text-xl">Loading globe...</div>
-        </div>
-      }>
-        <GlobeScene />
-      </Suspense>
+    <>
+      {/* SEO: Hidden heading for screen readers */}
+      <h1 className="sr-only">
+        Real-Time DDoS Attack Visualization - Interactive 3D Globe Showing Live Cyber Threats
+      </h1>
+      
+      <main 
+        className="relative w-screen h-screen overflow-hidden bg-black"
+        role="main"
+        aria-label="DDoS Attack Visualization Dashboard"
+      >
+        <Suspense fallback={
+          <div 
+            className="absolute inset-0 flex items-center justify-center bg-black"
+            role="status"
+            aria-live="polite"
+            aria-label="Loading 3D globe visualization"
+          >
+            <div className="text-white text-xl animate-pulse">Loading globe...</div>
+          </div>
+        }>
+          <GlobeScene />
+        </Suspense>
 
-      {/* UI Overlays */}
-      <TitlePanel />
-      <StatsPanel />
-      <ControlPanel />
-      <Legend />
-      <Footer />
-    </main>
+        {/* UI Overlays */}
+        <TitlePanel />
+        <StatsPanel />
+        <ControlPanel />
+        <Legend />
+        <Footer />
+      </main>
+    </>
   );
 }
 
